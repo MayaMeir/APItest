@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 function ShowCats() {
@@ -8,7 +8,7 @@ function ShowCats() {
 
     async function getCat() {
         try {
-            const res = await axios.get('http://localhost:3003/catapi/random') //http request to our server;
+            const res = await axios.get('http://localhost:3003/catapi/random') 
             setPic([res.data.url])
         }
         catch (error) {
